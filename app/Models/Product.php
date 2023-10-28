@@ -24,7 +24,7 @@ class Product extends Model
         'title',
         'brand_id',
         'price',
-        'thumbnail'
+        'thumbnail',
     ];
 
     protected static function boot(): void

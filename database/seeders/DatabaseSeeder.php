@@ -22,8 +22,12 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         Brand::factory(20)->create();
-//        Category::factory(20)->create();
+        Category::factory(20)
+            ->has(Product::factory(random_int(5, 15)))
+            ->create();
 
-        Product::factory(100)->has(Category::factory(random_int(1,3)))->create();
+        /*Product::factory(100)
+               ->has(Category::factory(random_int(1, 3)))
+               ->create();*/
     }
 }

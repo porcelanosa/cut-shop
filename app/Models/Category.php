@@ -31,6 +31,6 @@ class Category extends Model
 
     public function products(): BelongsToMany
     {
-        return $this->belongsToMany(__CLASS__);
+        return $this->belongsToMany(Product::class);
     }
 }
