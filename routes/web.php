@@ -17,3 +17,4 @@ Route::get('/', function () {
     dump($product[0]->brand());
     return view('welcome');
 });
+

@@ -10,5 +10,10 @@
     </head>
     <body class="antialiased">
         <h1>Cut Shop</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, placeat, sint. Autem eveniet ex laboriosam modi
+            officia quia tempore. Deleniti dolores dolorum error excepturi nam non quidem reprehenderit sint, ut?</p>
+
+            
+        @php phpinfo() @endphp
     </body>
 </html>
