@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Faker\FakerImageProvider;
+use Faker\Factory;
+use Faker\Generator;
 use App\Http\Kernel;
 use Carbon\CarbonInterval;
 use Illuminate\Database\Connection;
@@ -16,7 +19,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->singleton(Generator::class, static function () {
+            $faker = Factory::create();
+            $faker->addProvider(new FakerImageProvider($faker));
+            return $faker;
+        });
     }
 
     /**
