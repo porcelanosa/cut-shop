@@ -13,3 +13,7 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('auth.index');
 })->name('login');
+
+Route::get('/about', function () {
+    return view('page.about');
+})->name('about');
